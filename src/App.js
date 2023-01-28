@@ -4,12 +4,13 @@ import './App.css'
 
 import { collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore'
 
+
 function App() {
   const [info, setInfo] = useState()
   const [nombre, setNombre] = useState()
 
   const getData = async () => {
-    const snapshot = await getDocs(collection(db, 'mensajes'))
+    const snapshot = await getDocs(collection(db, 'customer'))
     const data = snapshot.docs.map((doc) => doc)
     setInfo(data)
   }
@@ -17,7 +18,7 @@ function App() {
   let usuario = { nombre: nombre }
 
   const createDoc = async () => {
-    await addDoc(collection(db, 'mensajes'), usuario)
+    await addDoc(collection(db, 'customer'), usuario)
     getData()
     setNombre('')
   }
@@ -34,6 +35,14 @@ function App() {
 
   return (
     <div className='App'>
+      <header className='logo'>Sushi Yoi
+        <div className='options'>
+          <a href='' className='our-menu'>Our Menu</a>
+          <a href='' className='reservations'>Reservations</a>
+          <a href='' className='faq'>FAQ</a>
+        </div>
+      </header>
+      <img src='https://media.istockphoto.com/id/521800854/photo/close-up-of-sashimi-sushi-set-with-chopsticks-and-soy.jpg?s=612x612&w=0&k=20&c=RoQuV_3WXfYofhGeoQyXg0soVMOFTWUNXXuZytSfhHA=' className='picture'></img>
       <button onClick={createDoc}>Crear</button>
       <button onClick={getData}>GetDocs</button>
       <input onChange={(e) => setNombre(e.target.value)} value={nombre} type='text' name='' id='' />
@@ -43,8 +52,8 @@ function App() {
             return (
               <li>
                 {e.data().nombre}:{e.id}
-                <button onClick={() => handleUpdateDoc(e.id, 'mensajes', nombre)}>actualizar</button>
-                <button onClick={() => handleDeleteDoc(e.id, 'mensajes')}>borrar</button>
+                <button onClick={() => handleUpdateDoc(e.id, 'customer', nombre)}>actualizar</button>
+                <button onClick={() => handleDeleteDoc(e.id, 'customer')}>borrar</button>
               </li>
             )
           })}
@@ -52,5 +61,6 @@ function App() {
     </div>
   )
 }
+
 
 export default App
