@@ -1,0 +1,77 @@
+@media screen and (max-width: 450px) {
+    .inputs:focus {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 160px;
+    }
+
+    .App {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .picture {
+        width: 100%;
+    }
+
+    .reserve {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
+
+
+
+    .options {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 14px;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .irasshaimase {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        padding-left: 60px;
+        overflow-wrap: break-word;
+        font-size: large;
+
+    }
+
+    .message {
+        inline-size: 213px;
+        overflow-wrap: break-word;
+        padding-left: 26px;
+    }
+
+    .picture2 {
+        width: 100%;
+    }
+
+    .message3 {
+        inline-size: 213px;
+        overflow-wrap: break-word;
+        padding-left: 85px;
+        font-size: medium;
+    }
+
+    .footer {
+        padding-right: 25px;
+    }
+
+}
