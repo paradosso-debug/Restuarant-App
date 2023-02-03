@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App {
-  text-align: center;
-}
-
 header {
   background-color: #14161a;
   min-height: 15vh;
@@ -19,17 +15,13 @@ header {
 
 
 
-.picture {
-  height: 100%;
-  width: 100%;
-}
 
 .options {
   display: flex;
   align-items: right;
   flex-direction: row;
   justify-content: space-around;
-  margin-left: 1100px;
+  margin-left: 900px;
 }
 
 .our-menu {
@@ -49,4 +41,92 @@ header {
   margin-right: 20px;
   color: white;
   text-decoration: none;
+}
+
+
+.picture {
+  height: 100%;
+  width: 100%;
+}
+
+
+.main {
+  display: flex;
+  text-align: center;
+  display: inline-grid;
+  margin: 60px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.message {
+  color: rgb(41, 99, 153);
+  margin-bottom: 50px;
+}
+
+.reserve {
+  font-size: xx-large;
+  color: #14161a;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+
+}
+
+.inputs:focus {
+  background-color: white;
+  color: rgb(41, 99, 153);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30px;
+  width: 400px;
+  border-style: none;
+  box-shadow: 0 0 0 5px #14161a;
+  outline-color: transparent;
+  margin: 20px 20px;
+
+
+}
+
+.send {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background-color: rgb(41, 99, 153);
+  color: white;
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.message3 {
+  color: #14161a;
+}
+
+.message2 {
+  color: rgba(129, 124, 124, 0.8);
+
+}
+
+.footer-options {
+  background-color: #14161a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style-type: none;
+  height: 60px;
+
+}
+
+.footer {
+  height: 100px;
+  background-color: #14161a;
+  color: white;
 }
