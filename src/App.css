@@ -49,6 +49,10 @@ header {
   width: 100%;
 }
 
+.picture2 {
+  width: 100%;
+}
+
 
 .main {
   display: flex;
@@ -102,6 +106,23 @@ header {
   height: 30px;
   width: 80px;
   border-radius: 5px;
+}
+
+
+.menu-message {
+  color: #1f2634;
+  font-size: large;
+}
+
+.menu-discreption {
+  color: rgb(41, 99, 153);
+  font-size: large;
+  font-weight: 400;
+}
+
+.menu-price {
+  color: rgb(86, 81, 81);
+  font-size: large;
 }
 
 .message3 {

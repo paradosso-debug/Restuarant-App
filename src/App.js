@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import { db } from './firebase'
 import './App.css'
 import './App.media.css'
+import Menu from './Menu.js'
 
 import { collection, addDoc, } from 'firebase/firestore'
 
 
-// USE OF PROPS AND HOOKS
-function App({ name: propsName, phone: propsPhone, email: propsEmail, date: propsDate, comments: propsComments }) {
+function App({ name: Name, phone: Phone, email: Email, date: Date, comments: Comments }) {
 
-  const [name, setName] = useState(propsName || '')
-  const [phone, setPhone] = useState(propsPhone || '')
-  const [email, setEmail] = useState(propsEmail || '')
-  const [date, setDate] = useState(propsDate || '')
-  const [comments, setComments] = useState(propsComments || '')
+  const [name, setName] = useState(Name || '')
+  const [phone, setPhone] = useState(Phone || '')
+  const [email, setEmail] = useState(Email || '')
+  const [date, setDate] = useState(Date || '')
+  const [comments, setComments] = useState(Comments || '')
 
   const createDoc = async () => {
     const customer = { name, phone, email, date, comments }
@@ -53,6 +53,32 @@ function App({ name: propsName, phone: propsPhone, email: propsEmail, date: prop
         </div>
       </main>
 
+      <div>
+
+        <Menu
+          name="Dragon Roll"
+          discreption="What is a dragon roll made of?
+          Image result for description of a dragon sushi roll
+          The festive dragon roll is a tasty uramaki sushi roll featuring avocado, unagi, and shrimp tempura."
+          price={20}
+        />
+        <img className='sushi-menu' src='https://media.istockphoto.com/id/1265011031/photo/sushi-roll-red-dragon-on-black-background.jpg?b=1&s=170667a&w=0&k=20&c=ABoE8ZD8mxDUzGE9rRNXwNg8ul5Tj0IVEeE9eyneurA='></img>
+        <Menu
+          name="Sashimi"
+          discreption="Sashimi is raw fish, served in long rectangular slices known as hira-zukuri."
+          price={30}
+        />
+
+        <img className='sushi-menu' src='https://cdn.pixabay.com/photo/2019/04/23/13/22/sushi-4149521__480.jpg'></img>
+
+        <Menu
+          name="Nigiri"
+          discreption="Nigiri is a type of sushi made up of molded structures of vinegared rice topped with slices of raw fish."
+          price={35}
+        />
+
+        <img className='sushi-menu' src='https://media.istockphoto.com/id/1345901125/es/foto/sushi-japon%C3%A9s-en-el-plato-con-estilo-minimalista.jpg?s=612x612&w=0&k=20&c=MQf46sQwzPe0vDvDQu11--wC4SHCaAn-eIgwSrrZwmE='></img>
+      </div>
 
       {/* RESERVATION SECTION */}
       <section>

@@ -47,21 +47,32 @@
         display: flex;
         justify-content: left;
         flex-wrap: wrap;
-        padding-left: 60px;
+        padding-left: 45px;
         overflow-wrap: break-word;
-        font-size: large;
+        font-size: larger;
 
     }
 
     .message {
         inline-size: 213px;
         overflow-wrap: break-word;
-        padding-left: 26px;
+        padding-left: 12px;
     }
 
     .picture2 {
         width: 100%;
     }
+
+    .sushi-menu {
+        width: 100%;
+        font-size: small;
+    }
+
+    .menu-discreption {
+        width: 100%;
+        font-size: small;
+    }
+
 
     .message3 {
         inline-size: 213px;
